@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SetupView1" >
+
+    <TextView
+        android:id="@+id/mode1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/one_player"
+        android:textSize="30sp" />
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" >
+
+        <TextView
+            android:id="@+id/first_move1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_move"
+            android:textSize="20sp" />    
+        
+        <RadioGroup
+        	android:id="@+id/radioButton1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" 
+        	android:orientation="horizontal" >
+ 
+        	<RadioButton
+            	android:id="@+id/radioX1"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="@string/x"
+        		android:onClick="x_first"/>
+ 
+        	<RadioButton
+            	android:id="@+id/radioO1"
+           	 	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="@string/o"
+            	android:onClick="o_first"/>
+    	</RadioGroup>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow1"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/o_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/computer"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/o_name_field1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="5"
+            android:hint="@string/o_name_field"
+            android:textSize="25sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tableRow2"
+        android:layout_below="@+id/mode1"
+        android:layout_marginTop="22dp" >
+
+        <TextView
+            android:id="@+id/x_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/x_name_field1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="5"
+            android:hint="@string/x_name_field"
+            android:textSize="25sp" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/start_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/start"
+        android:onClick="startGame" />
+
+    <Button
+        android:id="@+id/back_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/back"
+        android:onClick="goback"/>
+
+</RelativeLayout>
